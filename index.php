@@ -1,4 +1,4 @@
-<?
+<?php
   $dateString = fgets(fopen('./value.txt', 'r'));
 
   if( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
