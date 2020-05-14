@@ -49,6 +49,7 @@
     border: none;
     bottom: 0;
     margin-top: 4rem;
+    -webkit-appearance: none;
   }
   .times {
     font-size: 1rem;
