@@ -5,6 +5,8 @@
     $datetime = new DateTime();
     $dateString = $datetime->format('c');
     file_put_contents('./value.txt', $dateString);
+    header("Location: http://tokenburger.com");
+    die();
   }
 
   $date = new DateTime($dateString);
