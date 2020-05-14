@@ -65,13 +65,13 @@
   </p>
   <p>since the token burger pissed someone off</p>
   <div class="times">
-    or
+    <?= $difference->days ?> days
     <?= $difference->h ?> hours
     <?= $difference->m ?> minutes
     <?= $difference->s ?> seconds
   </div>
   <form method="POST">
-    <input type="submit" value="I'm pissed off now">
+    <input type="submit" value="Reset">
   </form>
 </body>
 </html>
