@@ -48,6 +48,11 @@
     font-size: 1.5rem;
     border: none;
     bottom: 0;
+    margin-top: 4rem;
+  }
+  .times {
+    font-size: 1rem;
+    opacity: 0.5;
   }
   </style>
 </head>
@@ -58,6 +63,12 @@
     <span class="day">days</span>
   </p>
   <p>since the token burger pissed someone off</p>
+  <div class="times">
+    or
+    <?= $difference->h ?> hours
+    <?= $difference->m ?> minutes
+    <?= $difference->s ?> seconds
+  </div>
   <form method="POST">
     <input type="submit" value="I'm pissed off now">
   </form>
