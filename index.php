@@ -1,5 +1,4 @@
 <?php
-  $dateString = fgets(fopen('./value.txt', 'r'));
 
   if( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
     $datetime = new DateTime();
@@ -9,6 +8,7 @@
     die();
   }
 
+  $dateString = fgets(fopen('./value.txt', 'r'));
   $date = new DateTime($dateString);
   $now = new DateTime();
   $difference = $date->diff($now);
@@ -69,7 +69,7 @@
   <div class="times">
     <?= $difference->days ?> days
     <?= $difference->h ?> hours
-    <?= $difference->m ?> minutes
+    <?= $difference->i ?> minutes
     <?= $difference->s ?> seconds
   </div>
   <form method="POST">
