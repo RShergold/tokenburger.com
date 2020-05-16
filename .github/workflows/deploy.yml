@@ -1,0 +1,21 @@
+name: Deploy
+on: 
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    name: Deploy 2
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: horochx/deploy-via-scp@master
+        with:
+          local: "./*"
+          remote: ${{ secrets.REMOTE }}
+          host: ${{ secrets.HOST }}
+          port: 22
+          user: ${{ secrets.USER }}
+          key: ${{ secrets.KEY }}
+        
