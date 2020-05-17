@@ -63,7 +63,9 @@
   <p>It has been<p>
   <p class="count-row"> 
     <span class="count"><?= $difference->days ?></span>
-    <span class="day">days</span>
+    <span class="day">
+      <?= $difference->days == 1 ? 'day' : 'days' ?>
+    </span>
   </p>
   <p>since the token burger pissed someone off</p>
   <div class="times">
