@@ -1,6 +1,6 @@
 <?php
 
-  if( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
+  if( $_SERVER['REQUEST_METHOD'] === 'POST' && $_POST["message"] == '' ) {
     $datetime = new DateTime();
     $dateString = $datetime->format('c');
     file_put_contents('./value.txt', $dateString);
@@ -76,7 +76,7 @@
     <?= $difference->s ?> seconds
   </div>
   <form method="POST">
-    <input name="post" style="display:none"/>
+    <input name="message" style="display:none"/>
     <input type="submit" value="Reset">
   </form>
 </body>
