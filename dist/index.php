@@ -76,6 +76,7 @@
     <?= $difference->s ?> seconds
   </div>
   <form method="POST">
+    <input name="post" style="display:none"/>
     <input type="submit" value="Reset">
   </form>
 </body>
