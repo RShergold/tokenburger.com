@@ -1,10 +1,13 @@
 <?php
 
-  if( $_SERVER['REQUEST_METHOD'] === 'POST' && $_POST["message"] == '' ) {
+  if( 
+    $_SERVER['REQUEST_METHOD'] === 'POST' 
+    && $_POST['message'] == ''
+    && $_POST['abra'] == 'cadabra' ) {
     $datetime = new DateTime();
     $dateString = $datetime->format('c');
     file_put_contents('./value.txt', $dateString);
-    header("Location: http://tokenburger.com");
+    header('Location: http://tokenburger.com');
     die();
   }
 
@@ -75,7 +78,7 @@
     <?= $difference->i ?> minutes
     <?= $difference->s ?> seconds
   </div>
-  <form method="POST">
+  <form method="POST" onformdata="event.formData.append('abra', 'cadabra')">
     <input name="message" style="display:none"/>
     <input type="submit" value="Reset">
   </form>
