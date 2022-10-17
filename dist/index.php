@@ -4,6 +4,7 @@
     $_SERVER['REQUEST_METHOD'] === 'POST' 
     && $_POST['message'] == ''
     && $_POST['abra'] == 'cadabra' ) {
+      
     $datetime = new DateTime();
     $dateString = $datetime->format('c');
     file_put_contents('./value.txt', $dateString);
@@ -24,8 +25,11 @@
   <title>Token Burger</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍔</text></svg>">
   <style>
+  :root {
+    --brand-color: #3b4652;
+  }
   body {
-    background-color: #3b4652;
+    background-color: var(--brand-color);
     padding: 4rem 1rem;
     font-family: sans-serif;
     font-size: 1.5rem;
@@ -34,7 +38,7 @@
   }
   .count {
     background-color: white;
-    color: #3b4652;
+    color: var(--brand-color);
     font-weight: 500;
     font-size: 2.5rem;
     padding: 0.25rem 0.5rem;
@@ -56,6 +60,7 @@
     bottom: 0;
     margin-top: 4rem;
     -webkit-appearance: none;
+    color: var(--brand-color);
   }
   .times {
     font-size: 1rem;
